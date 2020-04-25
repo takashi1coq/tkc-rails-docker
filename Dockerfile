@@ -5,7 +5,7 @@ RUN mkdir /tkc-rails-docker
 WORKDIR /tkc-rails-docker
 COPY Gemfile /tkc-rails-docker/Gemfile
 COPY Gemfile.lock /tkc-rails-docker/Gemfile.lock
-RUN bundle install
+RUN bundle install --without production
 COPY . /tkc-rails-docker
 
 # Add a script to be executed every time the container starts.
